@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		563942341D478E9A004068A3 /* SVTBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942291D478E9A004068A3 /* SVTBook.m */; };
+		563942351D478E9A004068A3 /* SVTBook+SVTBookSerilization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5639422B1D478E9A004068A3 /* SVTBook+SVTBookSerilization.m */; };
+		563942361D478E9A004068A3 /* SVTLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 5639422D1D478E9A004068A3 /* SVTLibrary.m */; };
+		563942371D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5639422F1D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.m */; };
+		563942381D478E9A004068A3 /* SVTReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942311D478E9A004068A3 /* SVTReader.m */; };
+		563942391D478E9A004068A3 /* SVTReader+SVTReaderSerilization.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942331D478E9A004068A3 /* SVTReader+SVTReaderSerilization.m */; };
+		5639423E1D478ECC004068A3 /* SVTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5639423C1D478ECC004068A3 /* SVTViewController.m */; };
+		5639423F1D478ECC004068A3 /* SVTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5639423D1D478ECC004068A3 /* SVTViewController.xib */; };
+		563942441D478F1E004068A3 /* SVTViewAddBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942421D478F1E004068A3 /* SVTViewAddBookController.m */; };
+		563942451D478F1E004068A3 /* SVTViewAddBookController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563942431D478F1E004068A3 /* SVTViewAddBookController.xib */; };
+		5639424A1D478F31004068A3 /* SVTViewChangeVisitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942481D478F31004068A3 /* SVTViewChangeVisitorController.m */; };
+		5639424B1D478F31004068A3 /* SVTViewChangeVisitorController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563942491D478F31004068A3 /* SVTViewChangeVisitorController.xib */; };
+		5639424E1D478F42004068A3 /* SVTModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5639424D1D478F42004068A3 /* SVTModelController.m */; };
+		563942521D478F51004068A3 /* SVTAppWindowChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942501D478F51004068A3 /* SVTAppWindowChangeController.m */; };
+		563942531D478F51004068A3 /* SVTAppWindowChangeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563942511D478F51004068A3 /* SVTAppWindowChangeController.xib */; };
+		563942561D478F5B004068A3 /* SVTTableCellViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942551D478F5B004068A3 /* SVTTableCellViewButton.m */; };
+		56EAF9A51D478DC400D2AD5D /* SVTAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EAF9A41D478DC400D2AD5D /* SVTAppController.m */; };
+		56EAF9A81D478DC400D2AD5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EAF9A71D478DC400D2AD5D /* main.m */; };
+		56EAF9AA1D478DC400D2AD5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EAF9A91D478DC400D2AD5D /* Assets.xcassets */; };
+		56EAF9AD1D478DC400D2AD5D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EAF9AB1D478DC400D2AD5D /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		563942281D478E9A004068A3 /* SVTBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTBook.h; sourceTree = "<group>"; };
+		563942291D478E9A004068A3 /* SVTBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTBook.m; sourceTree = "<group>"; };
+		5639422A1D478E9A004068A3 /* SVTBook+SVTBookSerilization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVTBook+SVTBookSerilization.h"; sourceTree = "<group>"; };
+		5639422B1D478E9A004068A3 /* SVTBook+SVTBookSerilization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVTBook+SVTBookSerilization.m"; sourceTree = "<group>"; };
+		5639422C1D478E9A004068A3 /* SVTLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTLibrary.h; sourceTree = "<group>"; };
+		5639422D1D478E9A004068A3 /* SVTLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTLibrary.m; sourceTree = "<group>"; };
+		5639422E1D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVTLibrary+SVTLibrarySerilization.h"; sourceTree = "<group>"; };
+		5639422F1D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVTLibrary+SVTLibrarySerilization.m"; sourceTree = "<group>"; };
+		563942301D478E9A004068A3 /* SVTReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTReader.h; sourceTree = "<group>"; };
+		563942311D478E9A004068A3 /* SVTReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTReader.m; sourceTree = "<group>"; };
+		563942321D478E9A004068A3 /* SVTReader+SVTReaderSerilization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVTReader+SVTReaderSerilization.h"; sourceTree = "<group>"; };
+		563942331D478E9A004068A3 /* SVTReader+SVTReaderSerilization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVTReader+SVTReaderSerilization.m"; sourceTree = "<group>"; };
+		5639423B1D478ECC004068A3 /* SVTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTViewController.h; sourceTree = "<group>"; };
+		5639423C1D478ECC004068A3 /* SVTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTViewController.m; sourceTree = "<group>"; };
+		5639423D1D478ECC004068A3 /* SVTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVTViewController.xib; sourceTree = "<group>"; };
+		563942411D478F1E004068A3 /* SVTViewAddBookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTViewAddBookController.h; sourceTree = "<group>"; };
+		563942421D478F1E004068A3 /* SVTViewAddBookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTViewAddBookController.m; sourceTree = "<group>"; };
+		563942431D478F1E004068A3 /* SVTViewAddBookController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVTViewAddBookController.xib; sourceTree = "<group>"; };
+		563942471D478F31004068A3 /* SVTViewChangeVisitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTViewChangeVisitorController.h; sourceTree = "<group>"; };
+		563942481D478F31004068A3 /* SVTViewChangeVisitorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTViewChangeVisitorController.m; sourceTree = "<group>"; };
+		563942491D478F31004068A3 /* SVTViewChangeVisitorController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVTViewChangeVisitorController.xib; sourceTree = "<group>"; };
+		5639424C1D478F42004068A3 /* SVTModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTModelController.h; sourceTree = "<group>"; };
+		5639424D1D478F42004068A3 /* SVTModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTModelController.m; sourceTree = "<group>"; };
+		5639424F1D478F51004068A3 /* SVTAppWindowChangeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTAppWindowChangeController.h; sourceTree = "<group>"; };
+		563942501D478F51004068A3 /* SVTAppWindowChangeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTAppWindowChangeController.m; sourceTree = "<group>"; };
+		563942511D478F51004068A3 /* SVTAppWindowChangeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVTAppWindowChangeController.xib; sourceTree = "<group>"; };
+		563942541D478F5B004068A3 /* SVTTableCellViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTTableCellViewButton.h; sourceTree = "<group>"; };
+		563942551D478F5B004068A3 /* SVTTableCellViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTTableCellViewButton.m; sourceTree = "<group>"; };
+		56EAF9A01D478DC400D2AD5D /* Exercise8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56EAF9A31D478DC400D2AD5D /* SVTAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVTAppController.h; sourceTree = "<group>"; };
+		56EAF9A41D478DC400D2AD5D /* SVTAppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVTAppController.m; sourceTree = "<group>"; };
+		56EAF9A71D478DC400D2AD5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		56EAF9A91D478DC400D2AD5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56EAF9AC1D478DC400D2AD5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		56EAF9AE1D478DC400D2AD5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56EAF99D1D478DC400D2AD5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		563942271D478E73004068A3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5639424C1D478F42004068A3 /* SVTModelController.h */,
+				5639424D1D478F42004068A3 /* SVTModelController.m */,
+				563942281D478E9A004068A3 /* SVTBook.h */,
+				563942291D478E9A004068A3 /* SVTBook.m */,
+				5639422A1D478E9A004068A3 /* SVTBook+SVTBookSerilization.h */,
+				5639422B1D478E9A004068A3 /* SVTBook+SVTBookSerilization.m */,
+				5639422C1D478E9A004068A3 /* SVTLibrary.h */,
+				5639422D1D478E9A004068A3 /* SVTLibrary.m */,
+				5639422E1D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.h */,
+				5639422F1D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.m */,
+				563942301D478E9A004068A3 /* SVTReader.h */,
+				563942311D478E9A004068A3 /* SVTReader.m */,
+				563942321D478E9A004068A3 /* SVTReader+SVTReaderSerilization.h */,
+				563942331D478E9A004068A3 /* SVTReader+SVTReaderSerilization.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		5639423A1D478EAC004068A3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5639423B1D478ECC004068A3 /* SVTViewController.h */,
+				5639423C1D478ECC004068A3 /* SVTViewController.m */,
+				5639423D1D478ECC004068A3 /* SVTViewController.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		563942401D478F05004068A3 /* Add book */ = {
+			isa = PBXGroup;
+			children = (
+				563942411D478F1E004068A3 /* SVTViewAddBookController.h */,
+				563942421D478F1E004068A3 /* SVTViewAddBookController.m */,
+				563942431D478F1E004068A3 /* SVTViewAddBookController.xib */,
+			);
+			name = "Add book";
+			sourceTree = "<group>";
+		};
+		563942461D478F21004068A3 /* Add Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				563942471D478F31004068A3 /* SVTViewChangeVisitorController.h */,
+				563942481D478F31004068A3 /* SVTViewChangeVisitorController.m */,
+				563942491D478F31004068A3 /* SVTViewChangeVisitorController.xib */,
+			);
+			name = "Add Visitor";
+			sourceTree = "<group>";
+		};
+		56EAF9971D478DC400D2AD5D = {
+			isa = PBXGroup;
+			children = (
+				56EAF9A21D478DC400D2AD5D /* Exercise8 */,
+				56EAF9A11D478DC400D2AD5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56EAF9A11D478DC400D2AD5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56EAF9A01D478DC400D2AD5D /* Exercise8.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56EAF9A21D478DC400D2AD5D /* Exercise8 */ = {
+			isa = PBXGroup;
+			children = (
+				563942461D478F21004068A3 /* Add Visitor */,
+				563942401D478F05004068A3 /* Add book */,
+				5639423A1D478EAC004068A3 /* view */,
+				563942271D478E73004068A3 /* model */,
+				56EAF9A31D478DC400D2AD5D /* SVTAppController.h */,
+				56EAF9A41D478DC400D2AD5D /* SVTAppController.m */,
+				5639424F1D478F51004068A3 /* SVTAppWindowChangeController.h */,
+				563942501D478F51004068A3 /* SVTAppWindowChangeController.m */,
+				563942541D478F5B004068A3 /* SVTTableCellViewButton.h */,
+				563942551D478F5B004068A3 /* SVTTableCellViewButton.m */,
+				563942511D478F51004068A3 /* SVTAppWindowChangeController.xib */,
+				56EAF9AB1D478DC400D2AD5D /* MainMenu.xib */,
+				56EAF9AE1D478DC400D2AD5D /* Info.plist */,
+				56EAF9A91D478DC400D2AD5D /* Assets.xcassets */,
+				56EAF9A61D478DC400D2AD5D /* Supporting Files */,
+			);
+			name = Exercise8;
+			path = Exercise7;
+			sourceTree = "<group>";
+		};
+		56EAF9A61D478DC400D2AD5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				56EAF9A71D478DC400D2AD5D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56EAF99F1D478DC400D2AD5D /* Exercise8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56EAF9B11D478DC400D2AD5D /* Build configuration list for PBXNativeTarget "Exercise8" */;
+			buildPhases = (
+				56EAF99C1D478DC400D2AD5D /* Sources */,
+				56EAF99D1D478DC400D2AD5D /* Frameworks */,
+				56EAF99E1D478DC400D2AD5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Exercise8;
+			productName = Exercise7;
+			productReference = 56EAF9A01D478DC400D2AD5D /* Exercise8.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56EAF9981D478DC400D2AD5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SVT;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Тимофей Савицкий";
+				TargetAttributes = {
+					56EAF99F1D478DC400D2AD5D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 56EAF99B1D478DC400D2AD5D /* Build configuration list for PBXProject "Exercise8" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 56EAF9971D478DC400D2AD5D;
+			productRefGroup = 56EAF9A11D478DC400D2AD5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56EAF99F1D478DC400D2AD5D /* Exercise8 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56EAF99E1D478DC400D2AD5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56EAF9AA1D478DC400D2AD5D /* Assets.xcassets in Resources */,
+				5639424B1D478F31004068A3 /* SVTViewChangeVisitorController.xib in Resources */,
+				563942531D478F51004068A3 /* SVTAppWindowChangeController.xib in Resources */,
+				563942451D478F1E004068A3 /* SVTViewAddBookController.xib in Resources */,
+				56EAF9AD1D478DC400D2AD5D /* MainMenu.xib in Resources */,
+				5639423F1D478ECC004068A3 /* SVTViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56EAF99C1D478DC400D2AD5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				563942381D478E9A004068A3 /* SVTReader.m in Sources */,
+				5639424E1D478F42004068A3 /* SVTModelController.m in Sources */,
+				563942441D478F1E004068A3 /* SVTViewAddBookController.m in Sources */,
+				563942561D478F5B004068A3 /* SVTTableCellViewButton.m in Sources */,
+				5639423E1D478ECC004068A3 /* SVTViewController.m in Sources */,
+				563942351D478E9A004068A3 /* SVTBook+SVTBookSerilization.m in Sources */,
+				563942341D478E9A004068A3 /* SVTBook.m in Sources */,
+				56EAF9A81D478DC400D2AD5D /* main.m in Sources */,
+				563942391D478E9A004068A3 /* SVTReader+SVTReaderSerilization.m in Sources */,
+				56EAF9A51D478DC400D2AD5D /* SVTAppController.m in Sources */,
+				563942371D478E9A004068A3 /* SVTLibrary+SVTLibrarySerilization.m in Sources */,
+				563942521D478F51004068A3 /* SVTAppWindowChangeController.m in Sources */,
+				5639424A1D478F31004068A3 /* SVTViewChangeVisitorController.m in Sources */,
+				563942361D478E9A004068A3 /* SVTLibrary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		56EAF9AB1D478DC400D2AD5D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56EAF9AC1D478DC400D2AD5D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56EAF9AF1D478DC400D2AD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		56EAF9B01D478DC400D2AD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		56EAF9B21D478DC400D2AD5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exercise7/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = savtym.Exercise8;
+				PRODUCT_NAME = Exercise8;
+			};
+			name = Debug;
+		};
+		56EAF9B31D478DC400D2AD5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Exercise7/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = savtym.Exercise8;
+				PRODUCT_NAME = Exercise8;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56EAF99B1D478DC400D2AD5D /* Build configuration list for PBXProject "Exercise8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56EAF9AF1D478DC400D2AD5D /* Debug */,
+				56EAF9B01D478DC400D2AD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56EAF9B11D478DC400D2AD5D /* Build configuration list for PBXNativeTarget "Exercise8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56EAF9B21D478DC400D2AD5D /* Debug */,
+				56EAF9B31D478DC400D2AD5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56EAF9981D478DC400D2AD5D /* Project object */;
+}
