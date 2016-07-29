@@ -10,7 +10,7 @@
 #import "SVTModelController.h"
 #import "SVTTableCellViewButton.h"
 
-@interface SVTViewAddBookController ()
+@interface SVTViewAddBookController() <NSWindowDelegate>
 @property (assign) IBOutlet NSTextField *labelTitle;
 @property (assign) IBOutlet NSTextField *labelAuthor;
 @property (assign) IBOutlet NSPopUpButton *popUpType;
@@ -46,6 +46,7 @@ static NSString *const kSVTViewAddBookControllerTableViewVisitorOwnedBook = @"Ow
     {
         _model = [model retain];
         _book = [[SVTBook alloc] init];
+        [self.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     }
     return self;
 }
@@ -89,9 +90,9 @@ static NSString *const kSVTViewAddBookControllerTableViewVisitorOwnedBook = @"Ow
 
 - (IBAction)buttonAddBook:(NSButton *)sender
 {
-    self.book.nameBook = self.labelTitle.stringValue;
-    self.book.author = self.labelAuthor.stringValue;
-    self.book.yearBook = [self.labelYear.stringValue integerValue];
+    self.book.nameBook = [self.labelTitle.stringValue isEqualToString:@""] ? @"Title" : self.labelTitle.stringValue ;
+    self.book.author = [self.labelAuthor.stringValue isEqualToString:@""] ? @"Author" : self.labelAuthor.stringValue;
+    self.book.yearBook = [self.labelYear.stringValue integerValue] ? [self.labelYear.stringValue integerValue] : 0;
     if ([self.popUpType.stringValue integerValue] == kSVTBookTypePaperBack)
     {
         self.book.bookType = kSVTBookTypePaperBack;
@@ -129,6 +130,13 @@ static NSString *const kSVTViewAddBookControllerTableViewVisitorOwnedBook = @"Ow
         [[self.model.library.readers objectAtIndex:row] returnBook:self.book];
         sender.title = kSVTViewAddBookControllerTableViewVisitorTakeBook;
     }
+}
+
+- (void)awakeFromNib
+{
+    [self.labelTitle setPlaceholderString:@"Title"];
+    [self.labelAuthor setPlaceholderString:@"Author"];
+    [self.labelYear setPlaceholderString:@"Year"];
 }
 
 - (void)dealloc

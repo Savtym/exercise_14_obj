@@ -19,14 +19,15 @@
 - (instancetype)initWithLibrary:(SVTLibrary *)library
 {
     self = [super init];
-    if (self != nil)
+    if (self)
     {
-        if (library != nil)
+        if (library)
         {
             _library = [library retain];
         }
         else
         {
+            [self release];
             self = nil;
         }
     }
@@ -42,9 +43,13 @@
 - (instancetype)initWithLibraryHistory:(NSString *)aPath
 {
     SVTLibrary *library = nil;
-    if (aPath != nil)
+    if (aPath)
     {
-         library = [NSKeyedUnarchiver unarchiveObjectWithFile:aPath];
+        library = [NSKeyedUnarchiver unarchiveObjectWithFile:aPath];
+        if (!library)
+        {
+            library = [[[SVTLibrary alloc] init] autorelease];
+        }
     }
     else
     {
@@ -53,6 +58,13 @@
     self = [self initWithLibrary:library];
     return self;
 }
+
+- (void)writeTofilePath:(NSString *)aPath
+{
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.library];
+    [data writeToFile:aPath atomically:NO];
+}
+
 
 - (void)dealloc
 {

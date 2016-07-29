@@ -90,9 +90,10 @@ static NSString *const kSVTReaderCurrentBook = @"CurrentBook";
 - (BOOL)returnBook:(SVTBook *)aBook
 {
     BOOL result = NO;
-    if ([self.currentBook containsObject:aBook])
+    if ([self.mCurrentBook containsObject:aBook])
     {
         [self.mCurrentBook removeObject:aBook];
+        aBook.owner = nil;
         result = YES;
     }
     return result;
@@ -100,7 +101,7 @@ static NSString *const kSVTReaderCurrentBook = @"CurrentBook";
 
 - (NSUInteger)hash
 {
-    return [self.firstName hash] ^ [self.lastName hash] ^ self.year ^ [self.currentBook hash] ^ [self.fullName hash];
+    return [self.firstName hash] ^ [self.lastName hash] ^ self.year ^ [self.mCurrentBook hash] ^ [self.fullName hash];
 }
 
 - (BOOL)isEqual:(SVTReader*)aReader
@@ -110,7 +111,7 @@ static NSString *const kSVTReaderCurrentBook = @"CurrentBook";
         [self.firstName isEqualToString:aReader.firstName] &&
         [self.lastName isEqualToString:aReader.lastName] &&
         self.year == aReader.year &&
-        [self.currentBook isEqualToArray:aReader.currentBook])
+        [self.mCurrentBook isEqualToArray:aReader.mCurrentBook])
     {
         result = YES;
     }

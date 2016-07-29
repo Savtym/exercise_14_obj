@@ -10,23 +10,27 @@
 #import "SVTViewController.h"
 #import "SVTModelController.h"
 
-@interface SVTAppController ()
+@interface SVTAppController()
 
 @property (assign) IBOutlet NSWindow *window;
-@property (retain) SVTViewController *view;
-@property (nonatomic, retain) SVTModelController *model;
+@property (retain, readwrite) SVTViewController *view;
+@property (nonatomic, retain, readwrite) SVTModelController *model;
 @end
 
 NSString *const kSVTAppControllerKeyPath = @"history";
 
 @implementation SVTAppController
+{
+@private
+    SVTViewController *_view;
+    SVTModelController *_model;
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     SVTModelController *model = [[SVTModelController alloc] initWithLibraryHistory:kSVTAppControllerKeyPath];
     self.model = model;
-    SVTViewController *controller = [[SVTViewController alloc] init];
-    [controller setModel:self.model];
+    SVTViewController *controller = [[SVTViewController alloc] initWithModel:self.model];
     [self.window.contentView addSubview:controller.view];
     self.view = controller;
     [controller release];
@@ -35,8 +39,7 @@ NSString *const kSVTAppControllerKeyPath = @"history";
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.model.library];
-    [data writeToFile:kSVTAppControllerKeyPath atomically:NO];
+    [self.model writeTofilePath:kSVTAppControllerKeyPath];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
@@ -49,6 +52,40 @@ NSString *const kSVTAppControllerKeyPath = @"history";
     [_model release];
     [_view release];
     [super dealloc];
+}
+
+
+#pragma mark - getters
+
+- (SVTViewController *)view
+{
+    return _view;
+}
+
+- (SVTModelController *)model
+{
+    return _model;
+}
+
+
+#pragma mark - setters
+
+- (void)setView:(SVTViewController *)view
+{
+    if (view != _view)
+    {
+        [_view release];
+        _view = [view retain];
+    }
+}
+
+- (void)setModel:(SVTModelController *)model
+{
+    if (model != _model)
+    {
+        [_model release];
+        _model = [model retain];
+    }
 }
 
 @end

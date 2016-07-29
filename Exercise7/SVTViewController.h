@@ -10,5 +10,5 @@
 @class SVTModelController;
 
 @interface SVTViewController : NSViewController
-@property (nonatomic, retain, readwrite) SVTModelController *model;
+- (instancetype)initWithModel:(SVTModelController *)model;
 @end

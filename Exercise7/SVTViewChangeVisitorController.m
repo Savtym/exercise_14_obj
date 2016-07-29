@@ -56,6 +56,7 @@ static NSString *const kSVTViewChangeVisitorControllerTableViewOwnedBy = @"Owned
         {
             _addReader = NO;
         }
+        [self.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     }
     return self;
 }
@@ -112,6 +113,11 @@ static NSString *const kSVTViewChangeVisitorControllerTableViewOwnedBy = @"Owned
                 giveBook.buttonGiveBook.enabled = NO;
             }
         }
+        else if (book.owner)
+        {
+            giveBook.buttonGiveBook.title = [NSString stringWithFormat:@"%@ %@",kSVTViewChangeVisitorControllerTableViewOwnedBy,[book.owner fullName]];
+            giveBook.buttonGiveBook.enabled = NO;
+        }
         else
         {
             giveBook.buttonGiveBook.title = kSVTViewChangeVisitorControllerTableViewTake;
@@ -126,9 +132,9 @@ static NSString *const kSVTViewChangeVisitorControllerTableViewOwnedBy = @"Owned
 {
     if (self.addReader)
     {
-        self.fieldName.stringValue = @"";
-        self.fieldSurname.stringValue = @"";
-        self.fieldYear.stringValue = @"";
+        [self.fieldName setPlaceholderString:@"name"];
+        [self.fieldSurname setPlaceholderString:@"Surname"];
+        [self.fieldYear setPlaceholderString:@"year"];
     }
     else
     {
@@ -163,7 +169,11 @@ static NSString *const kSVTViewChangeVisitorControllerTableViewOwnedBy = @"Owned
 {
     if (self.addReader)
     {
-        [self.model.library addReader:[[[SVTReader alloc] initWithTitle:self.fieldName.stringValue lastName:self.fieldSurname.stringValue year:[self.fieldYear.stringValue integerValue]] autorelease]];
+        SVTReader *reader = [[[SVTReader alloc] init] autorelease];
+        reader.firstName = [self.fieldName.stringValue isEqualToString:@""] ? @"Fisrt name" : self.fieldName.stringValue;
+        reader.lastName = [self.fieldSurname.stringValue isEqualToString:@""] ? @"Last name" : self.fieldSurname.stringValue;
+        reader.year = [self.fieldYear integerValue] ? [self.fieldYear integerValue] : 0;
+        [self.model.library addReader:reader];
     }
     else
     {
@@ -177,17 +187,17 @@ static NSString *const kSVTViewChangeVisitorControllerTableViewOwnedBy = @"Owned
         }
         if ([self.fieldYear.stringValue integerValue] != [[self.model.library.readers objectAtIndex:self.row] year])
         {
-            [[self.model.library.readers objectAtIndex:self.row] setYear:[self.fieldYear.stringValue integerValue]];
+            [[self.model.library.readers objectAtIndex:self.row] setYear:[self.fieldYear.stringValue integerValue] ? [self.fieldYear.stringValue integerValue] : 0];
         }
-        for (SVTBook *iBook in [[self.model.library.readers objectAtIndex:self.row] currentBook])
-        {
-            [[self.model.library.readers objectAtIndex:self.row] returnBook:iBook];
-        }
+        [[[self.model.library.readers objectAtIndex:self.row] currentBook] enumerateObjectsUsingBlock:^(SVTBook *iBook, NSUInteger index, BOOL *stop)
+         {
+             [[self.model.library.readers objectAtIndex:self.row] returnBook:iBook];
+         }];
     }
-    for (SVTBook *iBook in self.currentBook)
-    {
-        [[self.model.library.readers objectAtIndex:self.row] takeBook:iBook];
-    }
+    [self.currentBook enumerateObjectsUsingBlock:^(SVTBook *iBook, NSUInteger index, BOOL *stop)
+     {
+         [[self.model.library.readers objectAtIndex:self.row] takeBook:iBook];
+     }];
     NSWindow *window = [[NSApplication sharedApplication] keyWindow];
     [window close];
 }

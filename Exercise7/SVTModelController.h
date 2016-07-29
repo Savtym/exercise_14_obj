@@ -13,6 +13,7 @@
 
 - (instancetype)initWithLibrary:(SVTLibrary *)library NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithLibraryHistory:(NSString *)aPath;
+- (void)writeTofilePath:(NSString *)aPath;
 
 @property (retain, readonly, nonatomic) SVTLibrary *library;
 @end
