@@ -25,7 +25,7 @@ static NSString *const kSVTLibraryReaders = @"Readers";
     NSMutableArray<SVTReader *> *_mReaders;
 }
 
-- (instancetype)init
+- (instancetype)init 
 {
     self = [super init];
     if (self)
