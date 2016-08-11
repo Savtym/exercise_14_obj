@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SVTViewRenameBookAndTranslate">
             <connections>
+                <outlet property="animated" destination="Cn7-gV-bue" id="QWH-1g-b99"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -111,7 +112,7 @@
                     <font key="font" metaFont="system"/>
                     <tabViewItems>
                         <tabViewItem label="Text" identifier="1" id="fK7-yW-cei">
-                            <view key="view" ambiguous="YES" id="eCP-B8-Nc2">
+                            <view key="view" id="eCP-B8-Nc2">
                                 <rect key="frame" x="10" y="33" width="554" height="223"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -130,10 +131,13 @@
                             </view>
                         </tabViewItem>
                         <tabViewItem label="Translate" identifier="2" id="CNT-0R-iwF">
-                            <view key="view" id="5Aj-vf-fNe">
+                            <view key="view" ambiguous="YES" id="5Aj-vf-fNe">
                                 <rect key="frame" x="10" y="33" width="554" height="223"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" doubleValue="5" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Cn7-gV-bue">
+                                        <rect key="frame" x="261" y="108" width="32" height="32"/>
+                                    </progressIndicator>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fow-Ff-Bo1">
                                         <rect key="frame" x="15" y="17" width="524" height="203"/>
                                         <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="rAR-RR-jp5">

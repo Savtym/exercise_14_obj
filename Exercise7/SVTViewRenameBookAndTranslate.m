@@ -10,6 +10,7 @@
 #import "SVTModelController.h"
 
 @interface SVTViewRenameBookAndTranslate ()
+@property (assign) IBOutlet NSProgressIndicator *animated;
 @property (retain, readwrite) SVTBook *book;
 @property (readwrite, copy) NSString *textOfTranslate;
 @property (readwrite, copy) NSDictionary *lang;
@@ -72,7 +73,6 @@ NSString * const kSVTViewRenameBookAndTranslateApiLanguageTranslateText = @"text
                          {
                              self.lang = location[kSVTViewRenameBookAndTranslateLanguage];
                              self.langTranslate = location[kSVTViewRenameBookAndTranslateLanguageDirs];
-                             self.textOfTranslate = [location description];
                              [self popUpButtonChange];
                          });
                   }
@@ -87,7 +87,7 @@ NSString * const kSVTViewRenameBookAndTranslateApiLanguageTranslateText = @"text
           }
       }];
     [task resume];
-} 
+}
 
 - (IBAction)popUpButtonClickLanguage:(NSPopUpButton *)sender
 {
@@ -134,6 +134,9 @@ NSString * const kSVTViewRenameBookAndTranslateApiLanguageTranslateText = @"text
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    self.textOfTranslate = @"";
+    [self.animated startAnimation:nil];
+    [self.animated setHidden:NO];
     
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^
       (NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
@@ -154,6 +157,8 @@ NSString * const kSVTViewRenameBookAndTranslateApiLanguageTranslateText = @"text
                       dispatch_async(dispatch_get_main_queue(), ^
                          {
                              self.textOfTranslate = location[@"text"][0];
+                             [self.animated stopAnimation:nil];
+                             [self.animated setHidden:YES];
                          });
                   }
                   else
