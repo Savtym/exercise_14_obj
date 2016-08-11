@@ -29,7 +29,7 @@
                         <rect key="frame" x="1" y="0.0" width="558" height="218"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView identifier="Visitors" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Feg-UU-mAT" viewBased="YES" id="ohK-pn-hhI">
+                            <tableView identifier="Visitors" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Feg-UU-mAT" viewBased="YES" id="ohK-pn-hhI">
                                 <rect key="frame" x="0.0" y="0.0" width="558" height="195"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -266,6 +266,9 @@
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="8BV-5u-OMR" name="value" keyPath="values.author" id="qi7-T0-GAt"/>
+                    </connections>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4A0-eg-zCe">
                     <rect key="frame" x="251" y="13" width="99" height="32"/>
@@ -351,5 +354,6 @@
             </constraints>
             <point key="canvasLocation" x="483" y="347"/>
         </customView>
+        <userDefaultsController representsSharedInstance="YES" id="8BV-5u-OMR"/>
     </objects>
 </document>

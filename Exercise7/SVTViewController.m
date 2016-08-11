@@ -10,6 +10,7 @@
 #import "SVTModelController.h"
 #import "SVTAppWindowChangeController.h"
 #import "SVTViewChangeVisitorController.h"
+#import "SVTViewRenameBookAndTranslate.h"
 #import "SVTViewAddBookController.h"
 #import "SVTTableCellViewButton.h"
 
@@ -48,7 +49,7 @@ static NSString *const kSVTModelControllerTableViewBookOwnerPopUpButtonNone = @"
     if (self) {
         _openWindowsVisitor = [[NSMutableArray alloc] init];
         _model = [model retain];
-        [self.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+        self.view.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
     }
     return self;
 }
@@ -56,6 +57,7 @@ static NSString *const kSVTModelControllerTableViewBookOwnerPopUpButtonNone = @"
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     [self.tableViewReaders setDoubleAction:@selector(doubleClickToCellVisitor:)];
+    [self.tableViewBooks setDoubleAction:@selector(doubleClickToCellBook:)];
     NSTableCellView *result = nil;
     NSString *tableIdentifier = tableView.identifier;
     NSString *columnIdentifier = tableColumn.identifier;
@@ -166,6 +168,19 @@ static NSString *const kSVTModelControllerTableViewBookOwnerPopUpButtonNone = @"
         [windowChangeVisitor release];
     }
 }
+
+- (void)doubleClickToCellBook:(NSTableView *)tableView
+{
+    NSInteger row = tableView.selectedRow;
+    if (row < self.model.library.books.count)
+    {
+        SVTAppWindowChangeController *windowChangeVisitor = [[SVTAppWindowChangeController alloc] initWithViewRenameBook:self.model.library.books[row] row:row];
+        windowChangeVisitor.window.delegate = self;
+        [self.openWindowsVisitor addObject:windowChangeVisitor];
+        [windowChangeVisitor release];
+    }
+}
+
 
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
@@ -319,19 +334,22 @@ static NSString *const kSVTModelControllerTableViewBookOwnerPopUpButtonNone = @"
 - (void)windowWillClose:(NSNotification *)notification
 {
     SVTAppWindowChangeController *windowChangeController = [notification.object windowController];
-    NSIndexSet *row = [[NSMutableIndexSet alloc] initWithIndex:windowChangeController.viewChangeVisitor.row];
     if (!windowChangeController.viewChangeVisitor.addReader && windowChangeController.viewChangeVisitor)
     {
+        NSIndexSet *row = [[NSMutableIndexSet alloc] initWithIndex:windowChangeController.viewChangeVisitor.row];
         [self.tableViewReaders reloadDataForRowIndexes:row columnIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0,2)]];
         [self.tableViewBooks reloadData];
+        [row release];
     }
     else if (windowChangeController.viewChangeVisitor.addReader && self.model.library.readers.count == (windowChangeController.viewChangeVisitor.row + 1))
     {
+        NSIndexSet *row = [[NSMutableIndexSet alloc] initWithIndex:windowChangeController.viewChangeVisitor.row];
         NSTableView *tableView = self.tableViewReaders;
         [tableView beginUpdates];
         [tableView insertRowsAtIndexes:row withAnimation:NSTableViewAnimationEffectFade];
         [tableView endUpdates];
         [self.tableViewBooks reloadData];
+        [row release];
     }
     else if (windowChangeController.viewAddBook)
     {
@@ -340,8 +358,13 @@ static NSString *const kSVTModelControllerTableViewBookOwnerPopUpButtonNone = @"
         [tableView insertRowsAtIndexes:[NSIndexSet indexSetWithIndex:self.model.library.books.count] withAnimation:NSTableViewAnimationEffectFade];
         [tableView endUpdates];
     }
+    else if (windowChangeController.viewRenameBook)
+    {
+        NSIndexSet *row = [[NSMutableIndexSet alloc] initWithIndex:windowChangeController.viewRenameBook.row];
+        [self.tableViewBooks reloadDataForRowIndexes:row columnIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0,3)]];
+        [row release];
+    }
     [self.openWindowsVisitor removeObject:windowChangeController];
-    [row release];
 }
 
 - (void)dealloc

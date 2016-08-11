@@ -10,6 +10,8 @@
 #import "SVTViewChangeVisitorController.h"
 #import "SVTViewAddBookController.h"
 #import "SVTModelController.h"
+#import "SVTBook.h"
+#import "SVTViewRenameBookAndTranslate.h"
 
 @interface SVTAppWindowChangeController ()
 @end
@@ -18,6 +20,7 @@
 {
 @private
     SVTViewChangeVisitorController *_viewChangeVisitor;
+    SVTViewRenameBookAndTranslate *_viewRenameBook;
     SVTViewAddBookController *_viewAddBook;
 }
 
@@ -37,6 +40,16 @@
     if (self) {
         _viewAddBook = [[SVTViewAddBookController alloc] initWithAddBook:model];
         [self.window.contentView addSubview:_viewAddBook.view];
+    }
+    return self;
+}
+
+- (instancetype)initWithViewRenameBook:(SVTBook *)book row:(NSUInteger)row
+{
+    self = [super initWithWindowNibName:@"SVTAppWindowChangeController"];
+    if (self) {
+        _viewRenameBook = [[SVTViewRenameBookAndTranslate alloc] initWithBook:book row:row];
+        [self.window.contentView addSubview:_viewRenameBook.view];
     }
     return self;
 }

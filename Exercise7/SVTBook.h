@@ -27,5 +27,7 @@ typedef NS_ENUM (NSInteger, SVTBookType) {
 @property (readwrite, nonatomic) SVTBookType bookType;
 @property (readwrite, assign) SVTReader *owner;
 @property (readwrite, copy) NSString *author;
+@property (readwrite, copy) NSString *containsOfBook;
+@property (readwrite, copy) NSString *language;
 
 @end

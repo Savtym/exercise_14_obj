@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="tableViewBooks" destination="7u9-2f-yFM" id="BM2-VC-pUB"/>
                 <outlet property="tableViewReaders" destination="gIb-tc-FxK" id="zSh-aN-454"/>
-                <outlet property="tableViewReadersHeader" destination="kSt-8V-ZMw" id="GLX-Jz-JDr"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -81,7 +80,7 @@
                         <rect key="frame" x="1" y="0.0" width="558" height="149"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView identifier="Books" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="RuW-yp-7VX" viewBased="YES" id="7u9-2f-yFM">
+                            <tableView identifier="Books" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="RuW-yp-7VX" viewBased="YES" id="7u9-2f-yFM">
                                 <rect key="frame" x="0.0" y="0.0" width="558" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -210,8 +209,8 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <popUpButton identifier="Type" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7su-Xo-fBM" userLabel="PaperBack">
-                                                        <rect key="frame" x="3" y="-2" width="159" height="4"/>
-                                                        <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" inset="2" id="HMi-v4-jPt" userLabel="None">
+                                                        <rect key="frame" x="5" y="-2" width="154" height="21"/>
+                                                        <popUpButtonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="left" lineBreakMode="truncatingTail" inset="2" id="HMi-v4-jPt" userLabel="None">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
                                                             <menu key="menu" id="PMp-h0-CRM"/>
@@ -255,7 +254,7 @@
                         <rect key="frame" x="1" y="0.0" width="558" height="149"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView identifier="Visitors" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="kSt-8V-ZMw" viewBased="YES" id="gIb-tc-FxK">
+                            <tableView identifier="Visitors" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="kSt-8V-ZMw" viewBased="YES" id="gIb-tc-FxK">
                                 <rect key="frame" x="0.0" y="0.0" width="558" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>

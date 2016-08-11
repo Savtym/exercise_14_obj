@@ -26,20 +26,14 @@ static NSString *const kSVTBookBookType = @"BookType";
 static NSString *const kSVTBookID = @"ID";
 static NSString *const kSVTBookAuthor = @"Author";
 static NSString *const kSVTBookOwner = @"Owner";
-
-
+static NSString *const kSVTBookLanguage = @"Language";
+static NSString *const kSVTBookTextOfBook = @"TextOfBook";
 
 @implementation SVTBook
 
 - (instancetype)init
 {
-    self = [super init];
-    if (self)
-    {
-        _yearBook = 0;
-        _identifier = [[[NSUUID UUID] UUIDString] mutableCopy];
-    }
-    return self;
+    return [self initWithBook:@"title" yearBook:1990 bookType:0 identifier:[[[[NSUUID UUID] UUIDString] mutableCopy] autorelease] author:nil];
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder
@@ -53,6 +47,8 @@ static NSString *const kSVTBookOwner = @"Owner";
         _identifier = [[coder decodeObjectForKey:kSVTBookID] copy];
         _author = [[coder decodeObjectForKey:kSVTBookAuthor] copy];
         _owner = [coder decodeObjectForKey:kSVTBookOwner];
+        _language = [[coder decodeObjectForKey:kSVTBookLanguage] copy];
+        _containsOfBook = [[coder decodeObjectForKey:kSVTBookTextOfBook] copy];
     }
     return self;
 }
@@ -65,6 +61,8 @@ static NSString *const kSVTBookOwner = @"Owner";
     [coder encodeObject:_identifier forKey:kSVTBookID];
     [coder encodeObject:_author forKey:kSVTBookAuthor];
     [coder encodeObject:_owner forKey:kSVTBookOwner];
+    [coder encodeObject:_language forKey:kSVTBookLanguage];
+    [coder encodeObject:_containsOfBook forKey:kSVTBookTextOfBook];
 }
 
 - (instancetype)initWithBook:(NSString *)bookName yearBook:(NSInteger)bookYear bookType:(SVTBookType)bookCoverType identifier:(NSString *)aIdentifier author:(NSString *)author
@@ -76,7 +74,9 @@ static NSString *const kSVTBookOwner = @"Owner";
         _yearBook = bookYear;
         _bookType = bookCoverType;
         _identifier = [aIdentifier copy];
-        _author = [author copy];
+        _author = author ? [author copy] : nil;
+        _language = [[NSString alloc] initWithString:@"English"];
+        _containsOfBook = [[NSString alloc] initWithString:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."];
     }
     return self;
 }
@@ -101,6 +101,8 @@ static NSString *const kSVTBookOwner = @"Owner";
     [_nameBook release];
     [_identifier release];
     [_author release];
+    [_language release];
+    [_containsOfBook release];
     [super dealloc];
 }
 

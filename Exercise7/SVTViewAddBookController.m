@@ -46,7 +46,7 @@ static NSString *const kSVTViewAddBookControllerTableViewVisitorOwnedBook = @"Ow
     {
         _model = [model retain];
         _book = [[SVTBook alloc] init];
-        [self.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+        self.view.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
     }
     return self;
 }

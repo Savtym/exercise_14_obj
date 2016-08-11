@@ -10,13 +10,17 @@
 @class SVTViewChangeVisitorController;
 @class SVTModelController;
 @class SVTViewAddBookController;
+@class SVTViewRenameBookAndTranslate;
+@class SVTBook;
 
 @interface SVTAppWindowChangeController : NSWindowController<NSWindowDelegate>
 
 - (instancetype)initWithViewChangeVisitor:(SVTModelController *)model row:(NSInteger)row;
 - (instancetype)initWithViewAddBook:(SVTModelController *)model;
+- (instancetype)initWithViewRenameBook:(SVTBook *)book row:(NSUInteger)row;
 
 @property (retain, readonly) SVTViewChangeVisitorController *viewChangeVisitor;
 @property (retain, readonly) SVTViewAddBookController *viewAddBook;
+@property (retain, readonly) SVTViewRenameBookAndTranslate *viewRenameBook;
 
 @end

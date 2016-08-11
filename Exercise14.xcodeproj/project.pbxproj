@@ -23,6 +23,8 @@
 		563942521D478F51004068A3 /* SVTAppWindowChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942501D478F51004068A3 /* SVTAppWindowChangeController.m */; };
 		563942531D478F51004068A3 /* SVTAppWindowChangeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563942511D478F51004068A3 /* SVTAppWindowChangeController.xib */; };
 		563942561D478F5B004068A3 /* SVTTableCellViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 563942551D478F5B004068A3 /* SVTTableCellViewButton.m */; };
+		569628911D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5696288F1D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.m */; };
+		569628921D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 569628901D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.xib */; };
 		56EAF9A51D478DC400D2AD5D /* SVTAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EAF9A41D478DC400D2AD5D /* SVTAppController.m */; };
 		56EAF9A81D478DC400D2AD5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EAF9A71D478DC400D2AD5D /* main.m */; };
 		56EAF9AA1D478DC400D2AD5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56EAF9A91D478DC400D2AD5D /* Assets.xcassets */; };
@@ -58,7 +60,10 @@
 		563942511D478F51004068A3 /* SVTAppWindowChangeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVTAppWindowChangeController.xib; sourceTree = "<group>"; };
 		563942541D478F5B004068A3 /* SVTTableCellViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTTableCellViewButton.h; sourceTree = "<group>"; };
 		563942551D478F5B004068A3 /* SVTTableCellViewButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTTableCellViewButton.m; sourceTree = "<group>"; };
-		56EAF9A01D478DC400D2AD5D /* Exercise8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5696288E1D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVTViewRenameBookAndTranslate.h; sourceTree = "<group>"; };
+		5696288F1D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVTViewRenameBookAndTranslate.m; sourceTree = "<group>"; };
+		569628901D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SVTViewRenameBookAndTranslate.xib; sourceTree = "<group>"; };
+		56EAF9A01D478DC400D2AD5D /* Exercise14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EAF9A31D478DC400D2AD5D /* SVTAppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVTAppController.h; sourceTree = "<group>"; };
 		56EAF9A41D478DC400D2AD5D /* SVTAppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVTAppController.m; sourceTree = "<group>"; };
 		56EAF9A71D478DC400D2AD5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		563942401D478F05004068A3 /* Add book */ = {
 			isa = PBXGroup;
 			children = (
+				5696288D1D5B74C500B84D9F /* translate book */,
 				563942411D478F1E004068A3 /* SVTViewAddBookController.h */,
 				563942421D478F1E004068A3 /* SVTViewAddBookController.m */,
 				563942431D478F1E004068A3 /* SVTViewAddBookController.xib */,
@@ -129,10 +135,20 @@
 			name = "Add Visitor";
 			sourceTree = "<group>";
 		};
+		5696288D1D5B74C500B84D9F /* translate book */ = {
+			isa = PBXGroup;
+			children = (
+				5696288E1D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.h */,
+				5696288F1D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.m */,
+				569628901D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.xib */,
+			);
+			name = "translate book";
+			sourceTree = "<group>";
+		};
 		56EAF9971D478DC400D2AD5D = {
 			isa = PBXGroup;
 			children = (
-				56EAF9A21D478DC400D2AD5D /* Exercise8 */,
+				56EAF9A21D478DC400D2AD5D /* Exercise14 */,
 				56EAF9A11D478DC400D2AD5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,12 +156,12 @@
 		56EAF9A11D478DC400D2AD5D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56EAF9A01D478DC400D2AD5D /* Exercise8.app */,
+				56EAF9A01D478DC400D2AD5D /* Exercise14.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56EAF9A21D478DC400D2AD5D /* Exercise8 */ = {
+		56EAF9A21D478DC400D2AD5D /* Exercise14 */ = {
 			isa = PBXGroup;
 			children = (
 				563942461D478F21004068A3 /* Add Visitor */,
@@ -164,7 +180,7 @@
 				56EAF9A91D478DC400D2AD5D /* Assets.xcassets */,
 				56EAF9A61D478DC400D2AD5D /* Supporting Files */,
 			);
-			name = Exercise8;
+			name = Exercise14;
 			path = Exercise7;
 			sourceTree = "<group>";
 		};
@@ -179,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56EAF99F1D478DC400D2AD5D /* Exercise8 */ = {
+		56EAF99F1D478DC400D2AD5D /* Exercise14 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56EAF9B11D478DC400D2AD5D /* Build configuration list for PBXNativeTarget "Exercise8" */;
+			buildConfigurationList = 56EAF9B11D478DC400D2AD5D /* Build configuration list for PBXNativeTarget "Exercise14" */;
 			buildPhases = (
 				56EAF99C1D478DC400D2AD5D /* Sources */,
 				56EAF99D1D478DC400D2AD5D /* Frameworks */,
@@ -191,9 +207,9 @@
 			);
 			dependencies = (
 			);
-			name = Exercise8;
+			name = Exercise14;
 			productName = Exercise7;
-			productReference = 56EAF9A01D478DC400D2AD5D /* Exercise8.app */;
+			productReference = 56EAF9A01D478DC400D2AD5D /* Exercise14.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +227,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56EAF99B1D478DC400D2AD5D /* Build configuration list for PBXProject "Exercise8" */;
+			buildConfigurationList = 56EAF99B1D478DC400D2AD5D /* Build configuration list for PBXProject "Exercise14" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -224,7 +240,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56EAF99F1D478DC400D2AD5D /* Exercise8 */,
+				56EAF99F1D478DC400D2AD5D /* Exercise14 */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +252,7 @@
 			files = (
 				56EAF9AA1D478DC400D2AD5D /* Assets.xcassets in Resources */,
 				5639424B1D478F31004068A3 /* SVTViewChangeVisitorController.xib in Resources */,
+				569628921D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.xib in Resources */,
 				563942531D478F51004068A3 /* SVTAppWindowChangeController.xib in Resources */,
 				563942451D478F1E004068A3 /* SVTViewAddBookController.xib in Resources */,
 				56EAF9AD1D478DC400D2AD5D /* MainMenu.xib in Resources */,
@@ -256,6 +273,7 @@
 				563942561D478F5B004068A3 /* SVTTableCellViewButton.m in Sources */,
 				5639423E1D478ECC004068A3 /* SVTViewController.m in Sources */,
 				563942351D478E9A004068A3 /* SVTBook+SVTBookSerilization.m in Sources */,
+				569628911D5B74ED00B84D9F /* SVTViewRenameBookAndTranslate.m in Sources */,
 				563942341D478E9A004068A3 /* SVTBook.m in Sources */,
 				56EAF9A81D478DC400D2AD5D /* main.m in Sources */,
 				563942391D478E9A004068A3 /* SVTReader+SVTReaderSerilization.m in Sources */,
@@ -369,8 +387,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Exercise7/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = savtym.Exercise8;
-				PRODUCT_NAME = Exercise8;
+				PRODUCT_BUNDLE_IDENTIFIER = savtym.Exercise14;
+				PRODUCT_NAME = Exercise14;
 			};
 			name = Debug;
 		};
@@ -381,15 +399,15 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Exercise7/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = savtym.Exercise8;
-				PRODUCT_NAME = Exercise8;
+				PRODUCT_BUNDLE_IDENTIFIER = savtym.Exercise14;
+				PRODUCT_NAME = Exercise14;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56EAF99B1D478DC400D2AD5D /* Build configuration list for PBXProject "Exercise8" */ = {
+		56EAF99B1D478DC400D2AD5D /* Build configuration list for PBXProject "Exercise14" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56EAF9AF1D478DC400D2AD5D /* Debug */,
@@ -398,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56EAF9B11D478DC400D2AD5D /* Build configuration list for PBXNativeTarget "Exercise8" */ = {
+		56EAF9B11D478DC400D2AD5D /* Build configuration list for PBXNativeTarget "Exercise14" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56EAF9B21D478DC400D2AD5D /* Debug */,

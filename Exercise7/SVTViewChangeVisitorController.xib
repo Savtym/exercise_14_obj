@@ -92,7 +92,7 @@
                         <rect key="frame" x="1" y="0.0" width="558" height="238"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView identifier="listBooks" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="z3l-I2-UIJ" viewBased="YES" id="erw-E2-kHV">
+                            <tableView identifier="listBooks" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="z3l-I2-UIJ" viewBased="YES" id="erw-E2-kHV">
                                 <rect key="frame" x="0.0" y="0.0" width="558" height="215"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -198,13 +198,13 @@
                                                 <subviews>
                                                     <popUpButton identifier="Type" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-Wo-ytJ">
                                                         <rect key="frame" x="1" y="3" width="91" height="21"/>
-                                                        <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" enabled="NO" inset="2" id="sK6-eh-kfP">
+                                                        <popUpButtonCell key="cell" type="bevel" title="Hardcover" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" enabled="NO" state="on" inset="2" selectedItem="w7J-BF-sWu" id="sK6-eh-kfP">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
                                                             <menu key="menu" id="ptG-5B-IZn">
                                                                 <items>
                                                                     <menuItem title="Paperback" id="QhN-TW-xBb"/>
-                                                                    <menuItem title="Hardcover" id="w7J-BF-sWu"/>
+                                                                    <menuItem title="Hardcover" state="on" id="w7J-BF-sWu"/>
                                                                 </items>
                                                             </menu>
                                                         </popUpButtonCell>

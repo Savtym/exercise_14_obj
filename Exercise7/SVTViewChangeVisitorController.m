@@ -56,7 +56,7 @@ static NSString *const kSVTViewChangeVisitorControllerTableViewOwnedBy = @"Owned
         {
             _addReader = NO;
         }
-        [self.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+        self.view.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
     }
     return self;
 }
